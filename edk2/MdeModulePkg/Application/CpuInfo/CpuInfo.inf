@@ -1,0 +1,19 @@
+[Defines]
+  INF_VERSION                    = 0x00010006
+  BASE_NAME                      = CpuInfo
+  FILE_GUID                      = 52E4670C-A748-4F8A-AE88-8976127FD1A4
+  MODULE_TYPE                    = UEFI_APPLICATION
+  ENTRY_POINT                    = UefiMain
+
+[Sources]
+  CpuInfo.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+
+[BuildOptions]
+  GCC:*_*_*_CC_FLAGS = -mno-red-zone
